@@ -4,4 +4,4 @@ from django.shortcuts import render
 # def hello(request):
 #     return HttpResponse("Hello, World!")
 def hello(request):
-    return render(request, 'hello/table1.html')
+    return render(request, 'table1.html')
