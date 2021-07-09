@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-def hello(request):
-    return HttpResponse("Hello, World!")
+# def hello(request):
+#     return HttpResponse("Hello, World!")
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def table1(request):
+    return render(request, "tables/table1.html")
