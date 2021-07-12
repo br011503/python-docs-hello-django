@@ -36,5 +36,5 @@ def index(request):
     table = json.loads(result['table'])
     table['Tcount'] = result['count']
     table['time'] = result['time']
-    context = {"df":table}
+    context = table
     return render(request, "tables/table1.html", context = context)
