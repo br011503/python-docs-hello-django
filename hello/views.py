@@ -4,11 +4,7 @@ import urllib.request
 import json
 import os
 import ssl
-try:
-    import pandas as pd
-except:
-    ! pip install pandas
-    import pandas as pd
+import pandas as pd
 
 def allowSelfSignedHttps(allowed):
     # bypass the server certificate verification on client side
