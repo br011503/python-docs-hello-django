@@ -7,17 +7,6 @@ import subprocess
 import sys
 import os
 import ssl
-import pandas as pd
-
-
-REQUIRED = {'numpy', 'pandas'}
-
-installed = {pkg.key for pkg in pkg_resources.working_set}
-missing = REQUIRED - installed
-
-if missing:
-    python = sys.executable
-    subprocess.check_call([python, '-m', 'pip', 'install', *missing], stdout=subprocess.DEVNULL)
 
 def allowSelfSignedHttps(allowed):
     # bypass the server certificate verification on client side
