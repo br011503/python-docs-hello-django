@@ -33,8 +33,7 @@ def index(request):
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
 
-    table = json.loads(result['table'])
-    table['Tcount'] = result['count']
-    table['time'] = result['time']
-    context = table
-    return render(request, "tables/table1.html", context = context)
+    values = json.loads(result['table'])
+    values['Tcount'] = result['count']
+    values['time'] = result['time']
+    return render(request, "tables/table1.html", context = values)
