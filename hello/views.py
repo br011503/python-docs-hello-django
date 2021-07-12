@@ -37,4 +37,4 @@ def index(request):
     table['Tcount'] = result['count']
     table['time'] = result['time']
     context = table
-    return render(request, "tables/table1.html", context)
+    return render(request, "tables/table1.html", context = context)
