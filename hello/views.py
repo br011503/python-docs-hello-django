@@ -38,4 +38,8 @@ def index(request):
     values = json.loads(result['table'])
     values['Tcount'] = result['count']
     values['time'] = result['time']
+    values['pm10'] = result['pm10']
+    values['index_pm10'] = result['index_pm10']
+    values['pm25'] = result['pm25']
+    values['index_pm25'] = result['index_pm25']
     return render(request, "tables/table1.html", context = values)
