@@ -42,7 +42,7 @@ def index(request):
     values['index_pm10'] = result['index_pm10']
     values['pm25'] = result['pm25']
     values['index_pm25'] = result['index_pm25']
-    return render(request, "tables/table1.html", context = values)
+    return render(request, "tables/index.html", context = values)
 
 def oa_control(request):
     return render(request, "tables/oa_control.html")
