@@ -44,11 +44,11 @@ def index(request):
     values['index_pm25'] = result['index_pm25']
     return render(request, "tables/table1.html", context = values)
 
-def page_peak(request):
+def oa_control(request):
     return render(request, "tables/oa_control.html")
 
-def page_peak(request):
+def enthalpy_control(request):
     return render(request, "tables/enthalpy_control.html")
 
-def page_peak(request):
+def ahu_optimal_control(request):
     return render(request, "tables/ahu_optimal_control.html")
