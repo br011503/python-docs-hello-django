@@ -22,9 +22,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'oa_control' %}">재실자 기반 환기량</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'oa_control' %}">재실자 기반 환기량</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'enthalpy_control' %}">외기냉방 제어</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'ahu_optimal_control' %}">공조기 최적기동 시간</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'ahu_optimal_control' %}">공조기 최적기동 시간</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'elec_consumption' %}">전력소비(예정)</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'elec_peak' %}">전력 Peak(예정)</a></li>
                     </ul>
