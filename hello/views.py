@@ -52,3 +52,9 @@ def enthalpy_control(request):
 
 def ahu_optimal_control(request):
     return render(request, "tables/ahu_optimal_control.html")
+
+def elec_consumption(request):
+    return render(request, "tables/elec_consumption.html")
+
+def elec_peak(request):
+    return render(request, "tables/elec_peak.html")
