@@ -37,12 +37,12 @@
                 <div class="p-2 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-3 m-lg-5">
                         <h2 class="fs-4 fw-bold"> SKT타워 외기냉방 현황 </h2>
-                        <p class="mb-0"> 현제시간: 09-13 09:32 </p>
-                        <p class="mb-0"> 실외엔탈피: 00.0kj/kg (23.5℃ / 70.0%) </p>
-                        <p class="mb-0"> 최고온도층: 3F (23.5℃) </p>
-                        <p class="mb-0"> 최저온도층: 2F (21.5℃) </p>
-                        <p class="mb-0"> 평균온도: 21.5℃ </p>
-                        <p class="mb-0"> 냉방방식 및 Data 점검 필요: 7F, 3F 등등등 </p>
+                        <p class="mb-0"> 현제시간: {{time}} </p>
+                        <p class="mb-0"> 실외엔탈피: {{out_enthalpy}}kj/kg ({{out_Temperature}}℃ / {{out_Humidity}}%) </p>
+                        <p class="mb-0"> 최고온도층: {{in_Max_TF}} ({{in_Max_Temperature}}℃) </p>
+                        <p class="mb-0"> 최저온도층: {{in_Min_TF}} ({{in_Min_Temperature}}℃) </p>
+                        <p class="mb-0"> 평균온도: {{in_Mean_Temperature}}℃ </p>
+                        <p class="mb-0"> 냉방방식 및 Data 점검 필요: {{check_need}} </p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                                       <th scope="col">층</th>
                                       <th scope="col">외기댐퍼(%)</th>
                                       <th scope="col">온도(℃)</th>
-                                      <th scope="col">습도(%)</th>
+                                      <th scope="col">엔탈피(kj/kg)</th>
                                       <th scope="col">추천방식</th>
                                       <th scope="col">현재방식</th>
                                     </tr>
@@ -71,267 +71,267 @@
                                   <tbody>
                                     <tr>
                                       <th scope="row">01F</th>
-                                      <td>{{count.01F}}</td>
-                                      <td>{{OAD.01F}}</td>
-                                      <td>{{Optimal_OAD.01F}}</td>
-                                      <td>{{OAD.01F}}</td>
-                                      <td>{{Optimal_OAD.01F}}</td>
+                                      <td>{{table.od_value.1F}}</td>
+                                      <td>{{table.in_Temperature.1F}}</td>
+                                      <td>{{table.in_enthalpy.1F}}</td>
+                                      <td>{{table.recommend.1F}}</td>
+                                      <td>{{table.now_state.1F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">02F</th>
-                                      <td>{{count.02F}}</td>
-                                      <td>{{OAD.02F}}</td>
-                                      <td>{{Optimal_OAD.02F}}</td>
-                                      <td>{{OAD.02F}}</td>
-                                      <td>{{Optimal_OAD.02F}}</td>
+                                      <td>{{table.od_value.2F}}</td>
+                                      <td>{{table.in_Temperature.2F}}</td>
+                                      <td>{{table.in_enthalpy.2F}}</td>
+                                      <td>{{table.recommend.2F}}</td>
+                                      <td>{{table.now_state.2F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">03F</th>
-                                      <td>{{count.03F}}</td>
-                                      <td>{{OAD.03F}}</td>
-                                      <td>{{Optimal_OAD.03F}}</td>
-                                      <td>{{OAD.03F}}</td>
-                                      <td>{{Optimal_OAD.03F}}</td>
+                                      <td>{{table.od_value.3F}}</td>
+                                      <td>{{table.in_Temperature.3F}}</td>
+                                      <td>{{table.in_enthalpy.3F}}</td>
+                                      <td>{{table.recommend.3F}}</td>
+                                      <td>{{table.now_state.3F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">04F</th>
-                                      <td>{{count.04F}}</td>
-                                      <td>{{OAD.04F}}</td>
-                                      <td>{{Optimal_OAD.04F}}</td>
-                                      <td>{{OAD.04F}}</td>
-                                      <td>{{Optimal_OAD.04F}}</td>
+                                      <td>{{table.od_value.4F}}</td>
+                                      <td>{{table.in_Temperature.4F}}</td>
+                                      <td>{{table.in_enthalpy.4F}}</td>
+                                      <td>{{table.recommend.4F}}</td>
+                                      <td>{{table.now_state.4F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">05F</th>
-                                      <td>{{count.05F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.5F}}</td>
+                                      <td>{{table.in_Temperature.5F}}</td>
+                                      <td>{{table.in_enthalpy.5F}}</td>
+                                      <td>{{table.recommend.5F}}</td>
+                                      <td>{{table.now_state.5F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">06F</th>
-                                      <td>{{count.06F}}</td>
-                                      <td>{{OAD.06F}}</td>
-                                      <td>{{Optimal_OAD.06F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.6F}}</td>
+                                      <td>{{table.in_Temperature.6F}}</td>
+                                      <td>{{table.in_enthalpy.6F}}</td>
+                                      <td>{{table.recommend.6F}}</td>
+                                      <td>{{table.now_state.6F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">07F</th>
-                                      <td>{{count.07F}}</td>
-                                      <td>{{OAD.07F}}</td>
-                                      <td>{{Optimal_OAD.07F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.7F}}</td>
+                                      <td>{{table.in_Temperature.7F}}</td>
+                                      <td>{{table.in_enthalpy.7F}}</td>
+                                      <td>{{table.recommend.7F}}</td>
+                                      <td>{{table.now_state.7F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">08F</th>
-                                      <td>{{count.08F}}</td>
-                                      <td>{{OAD.08F}}</td>
-                                      <td>{{Optimal_OAD.08F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.8F}}</td>
+                                      <td>{{table.in_Temperature.8F}}</td>
+                                      <td>{{table.in_enthalpy.8F}}</td>
+                                      <td>{{table.recommend.8F}}</td>
+                                      <td>{{table.now_state.8F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">09F</th>
-                                      <td>{{count.09F}}</td>
-                                      <td>{{OAD.09F}}</td>
-                                      <td>{{Optimal_OAD.09F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.9F}}</td>
+                                      <td>{{table.in_Temperature.9F}}</td>
+                                      <td>{{table.in_enthalpy.9F}}</td>
+                                      <td>{{table.recommend.9F}}</td>
+                                      <td>{{table.now_state.9F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">10F</th>
-                                      <td>{{count.10F}}</td>
-                                      <td>{{OAD.10F}}</td>
-                                      <td>{{Optimal_OAD.10F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.10F}}</td>
+                                      <td>{{table.in_Temperature.10F}}</td>
+                                      <td>{{table.in_enthalpy.10F}}</td>
+                                      <td>{{table.recommend.10F}}</td>
+                                      <td>{{table.now_state.10F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">11F</th>
-                                      <td>{{count.11F}}</td>
-                                      <td>{{OAD.11F}}</td>
-                                      <td>{{Optimal_OAD.11F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.11F}}</td>
+                                      <td>{{table.in_Temperature.11F}}</td>
+                                      <td>{{table.in_enthalpy.11F}}</td>
+                                      <td>{{table.recommend.11F}}</td>
+                                      <td>{{table.now_state.11F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">12F</th>
-                                      <td>{{count.12F}}</td>
-                                      <td>{{OAD.12F}}</td>
-                                      <td>{{Optimal_OAD.12F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.12F}}</td>
+                                      <td>{{table.in_Temperature.12F}}</td>
+                                      <td>{{table.in_enthalpy.12F}}</td>
+                                      <td>{{table.recommend.12F}}</td>
+                                      <td>{{table.now_state.12F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">13F</th>
-                                      <td>{{count.13F}}</td>
-                                      <td>{{OAD.13F}}</td>
-                                      <td>{{Optimal_OAD.13F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.13F}}</td>
+                                      <td>{{table.in_Temperature.13F}}</td>
+                                      <td>{{table.in_enthalpy.13F}}</td>
+                                      <td>{{table.recommend.13F}}</td>
+                                      <td>{{table.now_state.13F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">14F</th>
-                                      <td>{{count.14F}}</td>
-                                      <td>{{OAD.14F}}</td>
-                                      <td>{{Optimal_OAD.14F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.14F}}</td>
+                                      <td>{{table.in_Temperature.14F}}</td>
+                                      <td>{{table.in_enthalpy.14F}}</td>
+                                      <td>{{table.recommend.14F}}</td>
+                                      <td>{{table.now_state.14F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">15F</th>
-                                      <td>{{count.15F}}</td>
-                                      <td>{{OAD.15F}}</td>
-                                      <td>{{Optimal_OAD.15F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.15F}}</td>
+                                      <td>{{table.in_Temperature.15F}}</td>
+                                      <td>{{table.in_enthalpy.15F}}</td>
+                                      <td>{{table.recommend.15F}}</td>
+                                      <td>{{table.now_state.15F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">16F</th>
-                                      <td>{{count.16F}}</td>
-                                      <td>{{OAD.16F}}</td>
-                                      <td>{{Optimal_OAD.16F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.16F}}</td>
+                                      <td>{{table.in_Temperature.16F}}</td>
+                                      <td>{{table.in_enthalpy.16F}}</td>
+                                      <td>{{table.recommend.16F}}</td>
+                                      <td>{{table.now_state.16F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">17F</th>
-                                      <td>{{count.17F}}</td>
-                                      <td>{{OAD.17F}}</td>
-                                      <td>{{Optimal_OAD.17F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.17F}}</td>
+                                      <td>{{table.in_Temperature.17F}}</td>
+                                      <td>{{table.in_enthalpy.17F}}</td>
+                                      <td>{{table.recommend.17F}}</td>
+                                      <td>{{table.now_state.17F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">18F</th>
-                                      <td>{{count.18F}}</td>
-                                      <td>{{OAD.18F}}</td>
-                                      <td>{{Optimal_OAD.18F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.18F}}</td>
+                                      <td>{{table.in_Temperature.18F}}</td>
+                                      <td>{{table.in_enthalpy.18F}}</td>
+                                      <td>{{table.recommend.18F}}</td>
+                                      <td>{{table.now_state.18F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">19F</th>
-                                      <td>{{count.19F}}</td>
-                                      <td>{{OAD.19F}}</td>
-                                      <td>{{Optimal_OAD.19F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.19F}}</td>
+                                      <td>{{table.in_Temperature.19F}}</td>
+                                      <td>{{table.in_enthalpy.19F}}</td>
+                                      <td>{{table.recommend.19F}}</td>
+                                      <td>{{table.now_state.19F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">20F</th>
-                                      <td>{{count.20F}}</td>
-                                      <td>{{OAD.20F}}</td>
-                                      <td>{{Optimal_OAD.20F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.20F}}</td>
+                                      <td>{{table.in_Temperature.20F}}</td>
+                                      <td>{{table.in_enthalpy.20F}}</td>
+                                      <td>{{table.recommend.20F}}</td>
+                                      <td>{{table.now_state.20F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">21F</th>
-                                      <td>{{count.21F}}</td>
-                                      <td>{{OAD.21F}}</td>
-                                      <td>{{Optimal_OAD.21F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.21F}}</td>
+                                      <td>{{table.in_Temperature.21F}}</td>
+                                      <td>{{table.in_enthalpy.21F}}</td>
+                                      <td>{{table.recommend.21F}}</td>
+                                      <td>{{table.now_state.21F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">22F</th>
-                                      <td>{{count.22F}}</td>
-                                      <td>{{OAD.22F}}</td>
-                                      <td>{{Optimal_OAD.22F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.22F}}</td>
+                                      <td>{{table.in_Temperature.22F}}</td>
+                                      <td>{{table.in_enthalpy.22F}}</td>
+                                      <td>{{table.recommend.22F}}</td>
+                                      <td>{{table.now_state.22F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">23F</th>
-                                      <td>{{count.23F}}</td>
-                                      <td>{{OAD.23F}}</td>
-                                      <td>{{Optimal_OAD.23F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.23F}}</td>
+                                      <td>{{table.in_Temperature.23F}}</td>
+                                      <td>{{table.in_enthalpy.23F}}</td>
+                                      <td>{{table.recommend.23F}}</td>
+                                      <td>{{table.now_state.23F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">24F</th>
-                                      <td>{{count.24F}}</td>
-                                      <td>{{OAD.24F}}</td>
-                                      <td>{{Optimal_OAD.24F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.24F}}</td>
+                                      <td>{{table.in_Temperature.24F}}</td>
+                                      <td>{{table.in_enthalpy.24F}}</td>
+                                      <td>{{table.recommend.24F}}</td>
+                                      <td>{{table.now_state.24F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">25F</th>
-                                      <td>{{count.25F}}</td>
-                                      <td>{{OAD.25F}}</td>
-                                      <td>{{Optimal_OAD.25F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.25F}}</td>
+                                      <td>{{table.in_Temperature.25F}}</td>
+                                      <td>{{table.in_enthalpy.25F}}</td>
+                                      <td>{{table.recommend.25F}}</td>
+                                      <td>{{table.now_state.25F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">26F</th>
-                                      <td>{{count.26F}}</td>
-                                      <td>{{OAD.26F}}</td>
-                                      <td>{{Optimal_OAD.26F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.26F}}</td>
+                                      <td>{{table.in_Temperature.26F}}</td>
+                                      <td>{{table.in_enthalpy.26F}}</td>
+                                      <td>{{table.recommend.26F}}</td>
+                                      <td>{{table.now_state.26F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">27F</th>
-                                      <td>{{count.27F}}</td>
-                                      <td>{{OAD.27F}}</td>
-                                      <td>{{Optimal_OAD.27F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.27F}}</td>
+                                      <td>{{table.in_Temperature.27F}}</td>
+                                      <td>{{table.in_enthalpy.27F}}</td>
+                                      <td>{{table.recommend.27F}}</td>
+                                      <td>{{table.now_state.27F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">28F</th>
-                                      <td>{{count.28F}}</td>
-                                      <td>{{OAD.28F}}</td>
-                                      <td>{{Optimal_OAD.28F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.28F}}</td>
+                                      <td>{{table.in_Temperature.28F}}</td>
+                                      <td>{{table.in_enthalpy.28F}}</td>
+                                      <td>{{table.recommend.28F}}</td>
+                                      <td>{{table.now_state.28F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">29F</th>
-                                      <td>{{count.29F}}</td>
-                                      <td>{{OAD.29F}}</td>
-                                      <td>{{Optimal_OAD.29F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.29F}}</td>
+                                      <td>{{table.in_Temperature.29F}}</td>
+                                      <td>{{table.in_enthalpy.29F}}</td>
+                                      <td>{{table.recommend.29F}}</td>
+                                      <td>{{table.now_state.29F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">30F</th>
-                                      <td>{{count.30F}}</td>
-                                      <td>{{OAD.30F}}</td>
-                                      <td>{{Optimal_OAD.30F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.30F}}</td>
+                                      <td>{{table.in_Temperature.30F}}</td>
+                                      <td>{{table.in_enthalpy.30F}}</td>
+                                      <td>{{table.recommend.30F}}</td>
+                                      <td>{{table.now_state.30F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">31F</th>
-                                      <td>{{count.31F}}</td>
-                                      <td>{{OAD.31F}}</td>
-                                      <td>{{Optimal_OAD.31F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.31F}}</td>
+                                      <td>{{table.in_Temperature.31F}}</td>
+                                      <td>{{table.in_enthalpy.31F}}</td>
+                                      <td>{{table.recommend.31F}}</td>
+                                      <td>{{table.now_state.31F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">32F</th>
-                                      <td>{{count.32F}}</td>
-                                      <td>{{OAD.32F}}</td>
-                                      <td>{{Optimal_OAD.32F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.32F}}</td>
+                                      <td>{{table.in_Temperature.32F}}</td>
+                                      <td>{{table.in_enthalpy.32F}}</td>
+                                      <td>{{table.recommend.32F}}</td>
+                                      <td>{{table.now_state.32F}}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">33F</th>
-                                      <td>{{count.33F}}</td>
-                                      <td>{{OAD.33F}}</td>
-                                      <td>{{Optimal_OAD.33F}}</td>
-                                      <td>{{OAD.05F}}</td>
-                                      <td>{{Optimal_OAD.05F}}</td>
+                                      <td>{{table.od_value.33F}}</td>
+                                      <td>{{table.in_Temperature.33F}}</td>
+                                      <td>{{table.in_enthalpy.33F}}</td>
+                                      <td>{{table.recommend.3#F}}</td>
+                                      <td>{{table.now_state.33F}}</td>
                                     </tr>
                                   </tbody>
                                 </table>
