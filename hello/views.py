@@ -27,7 +27,7 @@ def index(request):
         result = json.loads(result.decode("utf-8"))
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
-    values = json.loads(result['table'])
+#     values = json.loads(result['table'])
     values['Tcount'] = result['count']
     values['time'] = result['time']
     values['pm10'] = result['pm10']
