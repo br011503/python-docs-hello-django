@@ -38,7 +38,7 @@
                 <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-4 m-lg-5">
                         <h2 class="display-5 fw-bold"> SKT타워 운영현황 </h2>
-                        <p class="fs-4"> {{time}} </p>
+                        <p class="fs-4"> {{df1.time.0}} </p>
                     </div>
                 </div>
             </div>
@@ -55,19 +55,19 @@
                               <h2 class="fs-4 fw-bold">기상정보</h2>
                               <div class="row">
                                   <div class="col">건구온도</div>
-                                  <div class="col">{{df2.건구온도.0}}(℃)</div>
+                                  <div class="col">{{df1.dbt.0}}(℃)</div>
                                   <div class="col">습구온도</div>
-                                  <div class="col">{{df2.습구온도.0}}(℃)</div>
+                                  <div class="col">{{df1.wt.0}}(℃)</div>
                                   <div class="w-100"></div>
                                   <div class="col">상대습도</div>
-                                  <div class="col">{{df2.상대습도.0}}(%)</div>
+                                  <div class="col">{{df1.rh.0}}(%)</div>
                                   <div class="col">엔탈피</div>
-                                  <div class="col">{{df2.엔탈피.0}}(kJ/kg)</div>
+                                  <div class="col">{{df1.h.0}}(kJ/kg)</div>
                                   <div class="w-100"></div>
                                   <div class="col">PM10</div>
-                                  <div class="col">{{pm10}}({{index_pm10}})</div>
+                                  <div class="col">{{df1.PM10.0})</div>
                                   <div class="col">PM2.5</div>
-                                  <div class="col">{{pm25}}({{index_pm25}})</div>
+                                  <div class="col">{{df1.PM25.0}})</div>
                               </div>
                           </div>
                       </div>
