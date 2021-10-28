@@ -38,6 +38,27 @@
                     <div class="m-3 m-lg-5">
                         <h2 class="fs-4 fw-bold"> 공조기 최적기동 시간 </h2>
                         <p class="fs-4"> 준비예정 </p>
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th scope="col">구분</th>
+                              <th scope="col">예열시간(예측)</th>
+                              <th scope="col">권장기동시간</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">{{ahu_opts.loca.0}}</th>
+                              <td>{{ahu_opts.예열시간.0}}</td>
+                              <td>{{ahu_opts.opt_st.0}}</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">{{ahu_opts.loca.1}}</th>
+                              <td>{{ahu_opts.예열시간.1}}</td>
+                              <td>{{ahu_opts.opt_st.1}}</td>
+                            </tr>
+                          </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
