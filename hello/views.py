@@ -72,7 +72,24 @@ def enthalpy_control(request):
     return render(request, "tables/enthalpy_control.html", context = values)
 
 def ahu_optimal_control(request):
-    return render(request, "tables/ahu_optimal_control.html")
+    allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
+    data = {'param': {'bld': '1' }}
+    body = str.encode(json.dumps(data))
+    url = 'http://52.141.0.146:80/api/v1/service/tsop-skt-tower-ahu-opts/score'
+    api_key = 'AaRZN1f0iWPfXuMnXCI3qrGMAHqtJcJB' # Replace this with the API key for the web service
+    headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
+    req = urllib.request.Request(url, body, headers)
+    try:
+        response = urllib.request.urlopen(req)
+        result = response.read()
+    except urllib.error.HTTPError as error:
+        print("The request failed with status code: " + str(error.code))
+        print(error.info())
+    values = json.loads(result)
+    values['outs'] = json.loads(values['outs'])
+    values['ahu_opts'] = json.loads(values['ahu_opts'])
+    values['tables'] = json.loads(values['tables'])
+    return render(request, "tables/ahu_optimal_control.html", context = values)
 
 def elec_consumption(request):
     return render(request, "tables/elec_consumption.html")
