@@ -37,7 +37,6 @@
                 <div class="p-2 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-3 m-lg-5">
                         <h2 class="fs-4 fw-bold"> 공조기 최적기동 시간 </h2>
-                        <p class="fs-4"> 준비예정 </p>
                         <table class="table table-striped">
                           <thead>
                             <tr>
@@ -59,6 +58,10 @@
                             </tr>
                           </tbody>
                         </table>
+                        <p class="mb-0"> * 예열시간(예측) : 실내온도가 정상조건에 도달하기까지 걸리는 시간(예측) </p>
+                        <p class="mb-0"> * 08시 실내온도가 목표온도에 도달하는 조건 </p>
+                        <p class="mb-0"> * 저층부 : 05층 ~ 18층 </p>
+                        <p class="mb-0"> * 고층부 : 19층 ~ 31층 </p>
                     </div>
                 </div>
             </div>
@@ -72,8 +75,149 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-skip-start"></i></div>
-                                <h2 class="fs-4 fw-bold"> 공조기 최적기동 시간 </h2>
-                                <p class="mb-0"> 준비예정 </p>
+                                <h2 class="fs-4 fw-bold"> 공조기 기동현황 </h2>
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">공조기</th>
+                                      <th scope="col">시작</th>
+                                      <th scope="col">종료</th>
+                                      <th scope="col">운영시간</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.0}}</th>
+                                      <td>{{outs.시작.0}}</td>
+                                      <td>{{outs.종료.0}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.0}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.0}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.1}}</th>
+                                      <td>{{outs.시작.1}}</td>
+                                      <td>{{outs.종료.1}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.1}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.1}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.2}}</th>
+                                      <td>{{outs.시작.2}}</td>
+                                      <td>{{outs.종료.2}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.2}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.2}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.3}}</th>
+                                      <td>{{outs.시작.3}}</td>
+                                      <td>{{outs.종료.3}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.3}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.3}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.4}}</th>
+                                      <td>{{outs.시작.4}}</td>
+                                      <td>{{outs.종료.4}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.4}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.4}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.5}}</th>
+                                      <td>{{outs.시작.5}}</td>
+                                      <td>{{outs.종료.5}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.5}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.5}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.6}}</th>
+                                      <td>{{outs.시작.6}}</td>
+                                      <td>{{outs.종료.6}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.6}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.6}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.7}}</th>
+                                      <td>{{outs.시작.7}}</td>
+                                      <td>{{outs.종료.7}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.7}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.7}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.8}}</th>
+                                      <td>{{outs.시작.8}}</td>
+                                      <td>{{outs.종료.8}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.8}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.8}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.9}}</th>
+                                      <td>{{outs.시작.9}}</td>
+                                      <td>{{outs.종료.9}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.9}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.9}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.10}}</th>
+                                      <td>{{outs.시작.10}}</td>
+                                      <td>{{outs.종료.10}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.10}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.10}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.11}}</th>
+                                      <td>{{outs.시작.11}}</td>
+                                      <td>{{outs.종료.11}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.11}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.11}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">{{outs.공조기.12}}</th>
+                                      <td>{{outs.시작.12}}</td>
+                                      <td>{{outs.종료.12}}</td>
+                                      <td>
+                                          <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: {{outs.운영시간.12}}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>{{outs.운영시간.12}}
+                                          </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
