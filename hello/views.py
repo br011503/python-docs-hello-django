@@ -17,8 +17,8 @@ def index(request):
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     data = {'param':{'bld':1}}
     body = str.encode(json.dumps(data))
-    url = 'http://52.141.0.146:80/api/v1/service/tsop-skt-tower-main/score'
-    api_key = 'JbixWfRonFXDehmdbHcPit4rbyZJpsog' # Replace this with the API key for the web service
+    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-web-ttower-main/score'
+    api_key = 'HHd1fwMBSdBu485LtOxP2D8lzkY4ax9B' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
     req = urllib.request.Request(url, body, headers)
     try:
@@ -38,8 +38,8 @@ def oa_control(request):
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     data = {'param':{'bld':1}}
     body = str.encode(json.dumps(data))
-    url = 'http://52.141.0.146:80/api/v1/service/tsop-skt-ocb-control/score'
-    api_key = 'kwea4NGIHAlBO1g5P6M4fQ5dVSb2D5Lz' # Replace this with the API key for the web service
+    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-occ-count/score'
+    api_key = 'j5cTayYSnWEA6y6nINJXf9ZMgyQuMdRi' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
     req = urllib.request.Request(url, body, headers)
     try:
@@ -57,8 +57,8 @@ def enthalpy_control(request):
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     data = {'param': {'bld': '1' }}
     body = str.encode(json.dumps(data))
-    url = 'http://52.141.0.146:80/api/v1/service/tsop-skt-ahu-economizer/score'
-    api_key = 'UrAzVhOgxF0xvmYeWHN48CqaVf42Fx5L' # Replace this with the API key for the web service
+    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-ahu-economizer/score'
+    api_key = '58WoICsiZYhsi8eUbXbzWhSHVgeYqvAO' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
     req = urllib.request.Request(url, body, headers)
     try:
@@ -75,8 +75,8 @@ def ahu_optimal_control(request):
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     data = {'param': {'bld': '1' }}
     body = str.encode(json.dumps(data))
-    url = 'http://52.141.0.146:80/api/v1/service/tsop-skt-tower-ahu-opts/score'
-    api_key = 'AaRZN1f0iWPfXuMnXCI3qrGMAHqtJcJB' # Replace this with the API key for the web service
+    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-web-ttower-ahuopts/score'
+    api_key = '4RDbxMhFp1ieh6kuAHPLzQdOMJvwJNAQ' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
     req = urllib.request.Request(url, body, headers)
     try:
