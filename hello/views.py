@@ -17,8 +17,8 @@ def index(request):
     allowSelfSignedHttps(True) # this line is needed if you use self-signed certificate in your scoring service.
     data = {'param':{'bld':1}}
     body = str.encode(json.dumps(data))
-    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-web-ttower-main/score'
-    api_key = 'HHd1fwMBSdBu485LtOxP2D8lzkY4ax9B' # Replace this with the API key for the web service
+    url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-web-skttower-main/score'
+    api_key = 'G4rgupz0bg5Nat913s5duaoiSenWomV7' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
     
     try:
