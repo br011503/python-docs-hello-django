@@ -20,8 +20,9 @@ def index(request):
     url = 'http://20.214.223.234:80/api/v1/service/aihvac-skt-web-ttower-main/score'
     api_key = 'HHd1fwMBSdBu485LtOxP2D8lzkY4ax9B' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
-    req = urllib.request.Request(url, body, headers)
+    
     try:
+        req = urllib.request.Request(url, body, headers)
         response = urllib.request.urlopen(req)
         result = response.read()
         result = json.loads(result)
