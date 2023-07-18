@@ -28,7 +28,8 @@ def index(request):
         result = json.loads(result)
         result = json.loads(result['df1'])
     except urllib.error.HTTPError as error:
-        result = '{"dbt":{"0":0.0},"rh":{"0":0.0},"wt":{"0":0.0},"x":{"0":0.0},"h":{"0":0.0},"PM10":{"0":"0"},"PM25":{"0":"0"},"time":{"0":"00월 00일 00시 00분"}}'
+        result = {"dbt":{"0":0.0},"rh":{"0":0.0},"wt":{"0":0.0},"x":{"0":0.0},
+                  "h":{"0":0.0},"PM10":{"0":"0"},"PM25":{"0":"0"},"time":{"0":"00월 00일 00시 00분"}}
 
     
     
